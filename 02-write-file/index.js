@@ -7,8 +7,8 @@ const writingHanler = async () => {
 
   process.stdout.write('\nWrite your text: \n');
   process.stdin.on('data', (chunk) => {
-    const parsedChunk = chunk.toString('utf8');
-    if (parsedChunk.includes('exit')) {
+    const chunkSring = chunk.toString('utf8');
+    if (chunkSring.includes('exit')) {
       process.stdout.write('\n✅ Your data was saved. \n');
       process.exit();
     } else {
